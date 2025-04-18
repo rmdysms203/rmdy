@@ -1,0 +1,55 @@
+<html lang="en"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Remedy Dashboard</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="night">
+  <!-- Background elements -->
+  <div class="background-container">
+    <div id="stars"></div>
+    <div id="sun-moon"></div>
+    <div id="shooting-stars"></div>
+  </div>
+
+  <!-- Main content -->
+  <main>
+    <div class="center-content">
+      <!-- Logo and title -->
+      <div class="logo">
+        <svg class="broken-heart" viewBox="0 0 100 100" width="80" height="80">
+          <defs>
+            <filter id="glow">
+              <feGaussianBlur stdDeviation="2" result="coloredBlur"></feGaussianBlur>
+              <feMerge>
+                <feMergeNode in="coloredBlur"></feMergeNode>
+                <feMergeNode in="SourceGraphic"></feMergeNode>
+              </feMerge>
+            </filter>
+          </defs>
+          <path class="heart-left" d="M50,35 C50,35 20,15 10,30 C0,45 15,65 25,75 C35,85 50,90 50,90 L50,35" fill="#F70A8D"></path>
+          <path class="heart-right" d="M50,35 C50,35 80,15 90,30 C100,45 85,65 75,75 C65,85 50,90 50,90 L50,35" fill="#F70A8D"></path>
+          <path class="crack" d="M50,35 L48,45 L52,55 L48,65 L52,75 L50,90" fill="none" stroke="white" stroke-width="2"></path>
+          <circle class="shatter" cx="47" cy="50" r="1.5" fill="white"></circle>
+          <circle class="shatter" cx="53" cy="60" r="1" fill="white"></circle>
+          <circle class="shatter" cx="46" cy="70" r="1.2" fill="white"></circle>
+        </svg>
+        <h1 class="title">Welcome to Remedy</h1>
+      </div>
+
+      <!-- Time display -->
+      <div class="time" id="time">00:00:00</div>
+      <div class="greeting" id="greeting">Good Night</div>
+      <div class="date" id="date"></div>
+    </div>
+  </main>
+
+  <!-- Timezone modal -->
+  <div class="timezone-modal">
+    <input type="text" class="timezone-search" placeholder="Search timezone...">
+    <div class="timezone-list"></div>
+  </div>
+
+  <script src="js/script.js"></script>
+
+</body></html>
